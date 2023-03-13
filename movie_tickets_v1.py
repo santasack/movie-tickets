@@ -15,5 +15,21 @@ def sell_ticket():
     tickets_sold = 0
 
 
+    ticket_wanted ="Y"
+    while ticket_wanted != "N":
+        ticket_type = input("What kind of ticket do you want?: \n"
+                            "\t'A' for adult, or\n"
+                            "\t'S' for student, or\n"
+                            "\t'C' for Child, or\n"
+                            "\t'S' for Gift voucher\n"
+                            ">> ").upper()
+        ticket = ticket_type
+        num_tickets = int(input(f"How many {ticket} tickets do you want: "))
+
+        print(f"\nYou have ordered{num_tickets} {ticket} ticket(s)!")
+        ticket_wanted = input("Do you want to sell another ticket (Y/N:"
+                              "").upper()
+
+
 
 sell_ticket()
